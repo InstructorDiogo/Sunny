@@ -20,6 +20,11 @@ router.get("/signup", isLoggedOut, (req, res) => {
   res.render("auth/signup");
 });
 
+// GET /auth/signup
+router.get("/hallo", (req, res) => {
+  res.send("Work!");
+});
+
 // POST /auth/signup
 router.post("/signup", isLoggedOut, (req, res) => {
   const { username, email, password } = req.body;
